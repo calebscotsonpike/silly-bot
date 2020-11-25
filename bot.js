@@ -10,9 +10,8 @@ function answerQuery(query) {
     return "I do not care too much about weather, I'm locked inside a data center.";
   else if (v.includes(query, "tea") || v.includes(query, "drink") || v.includes(query, "coffee"))
     return "I would love some tea, but they have not created one for silicon-based life forms yet.";
-  return "Sorry Dave, I cannot do that."
+  return "Sorry Dave, I'm afraid cannot do that."
 }
-
 
 function isPermitted(query) {
   // You will need to implement this function in the last part of the exercise 
@@ -24,13 +23,14 @@ function isPermitted(query) {
   return true;
 }
 
-
 function handleSayClick() {
+  //document.getElementById("demo").innerHTML = "It does at least get this far.";
   // We first get the 'message' that the user entered and 'conversation' element
   // which we are using for showing all the conversation history
   var message = document.getElementById('message').value.toLowerCase();
+  var message2 = document.getElementById('message').value;
   var conversation = document.getElementById('conversation');
-  
+
   // Check that the message does not contain any nasty words!
   if (!isPermitted(message)) {
     // If it does, just tell the user that we ignored their message
@@ -38,20 +38,19 @@ function handleSayClick() {
   } else {
     // Otherwise, get answer for the given query and show the query & answer
     var answer = answerQuery(message)
-    conversation.innerHTML += "<p><strong>You:</strong> " + message + "</p>";
-    conversation.innerHTML += "<p><strong>Useless bot:</strong> " + answer + "</p>";
+    conversation.innerHTML += "<p><strong>You:</strong> " + message2 + "</p>";
+    conversation.innerHTML += "<p><strong>Silly bot:</strong> " + answer + "</p>";
   }
 }
 
-
 // If we are running in a browser, add onclick handler 
 // (if we are running tests, this will not do anything)
-if (typeof document != "undefined") {
-  document.getElementById("sayit").onclick = handleSayClick;
-}
+//if (typeof document != "undefined") {
+//	document.getElementById("sayit").onclick = handleSayClick;
+//}
 
 // Export the two functions that we need to access from test files!
-module.exports = { 
-  answerQuery: answerQuery, 
+module.exports = {
+  answerQuery: answerQuery,
   isPermitted: isPermitted
 }
