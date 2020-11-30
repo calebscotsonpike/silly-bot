@@ -10,7 +10,7 @@ function answerQuery(query) {
     return "I do not care too much about weather, I'm locked inside a data center.";
   else if (v.includes(query, "tea") || v.includes(query, "drink") || v.includes(query, "coffee"))
     return "I would love some tea, but they have not created one for silicon-based life forms yet.";
-  return "Sorry Dave, I'm afraid cannot do that."
+  return "Sorry Dave, I'm afraid cannot do that.";
 }
 
 function isPermitted(query) {
