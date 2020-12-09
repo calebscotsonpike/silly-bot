@@ -1,3 +1,7 @@
+//@author Tomas Petricek
+//@edited by Caleb Scotson Pike
+//@last modified 2020.12.09
+
 var v = require('voca');
 
 function answerQuery(query) {
