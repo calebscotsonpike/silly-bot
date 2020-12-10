@@ -8,6 +8,8 @@ README for silly-bot
 @edited by Caleb Scotson Pike
 @last modified 2020-12-10
 
-This is a very silly chat bot with no AI at all. For a software engineering class.
+This is a very silly chat bot with no AI at all.
+The silly bot is a slight improvement on the useless bot.
+For a software engineering class.
 Original program developed by Tomas Petricek.
  
