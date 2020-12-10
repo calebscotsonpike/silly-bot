@@ -2,7 +2,7 @@
 
 ![Travis Build](https://api.travis-ci.com/tpetricek/silly-bot.svg?branch=master)
 
-README for useless-bot
+README for silly-bot
 
 @author Tomas Petricek
 @edited by Caleb Scotson Pike
