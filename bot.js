@@ -24,6 +24,8 @@ function isPermitted(query) {
   if (v.includes(lower, "brexit")) return false;
   var words = v.words(v.lowerCase(query));
   if (words.indexOf("shit") != -1) return false;
+  var words = v.words(v.lowerCase(query));
+  if (words.indexOf("fuck") != -1) return false;
   return true;
 }
 
@@ -45,6 +47,7 @@ function handleSayClick() {
     conversation.innerHTML += "<p><strong>You:</strong> " + message2 + "</p>";
     conversation.innerHTML += "<p><strong>Silly bot:</strong> " + answer + "</p>";
   }
+  document.getElementById("message").value = '';
 }
 
 // If we are running in a browser, add onclick handler 
