@@ -37,6 +37,15 @@
   </div>
   <script src="voca.js" type="text/javascript"></script>
   <script src="bot.js"></script>
+  <script>
+    var enterClick = document.getElementById("message");
+    enterClick.addEventListener("keyup", function (event) {
+      if (event.code === 'Enter') {
+        event.preventDefault();
+        document.getElementById("sayit").click();
+      }
+    });
+  </script>
 </body>
 
 </html>
