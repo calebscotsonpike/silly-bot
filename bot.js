@@ -1,6 +1,6 @@
 //@author Tomas Petricek
 //@edited by Caleb Scotson Pike
-//@last modified 2020.12.09
+//@last modified 2020.12.16
 
 var v = require('voca');
 
@@ -49,6 +49,7 @@ function handleSayClick() {
     conversation.innerHTML += "<p><strong>You:</strong> " + message2 + "</p>";
     conversation.innerHTML += "<p><strong>Silly bot:</strong> " + answer + "</p>";
   }
+  scrollToBottom();
   document.getElementById("message").value = '';
 }
 
