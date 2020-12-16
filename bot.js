@@ -10,7 +10,9 @@ function answerQuery(query) {
   // 'query' to lover-case and then tests if the query contains various keywords
   // using 'v.includes'. You call all 'voca' functions by typing 'v.<some function>'/  
   query = v.lowerCase(query);
-  if (v.includes(query, "rain") || v.includes(query, "sun") || v.includes(query, "weather"))
+  if (query == "")
+    return "You didn't say anything.";
+  else if (v.includes(query, "rain") || v.includes(query, "sun") || v.includes(query, "weather"))
     return "I do not care too much about weather, I'm locked inside a data center.";
   else if (v.includes(query, "tea") || v.includes(query, "drink") || v.includes(query, "coffee"))
     return "I would love some tea, but they have not created one for silicon-based life forms yet.";
@@ -22,9 +24,9 @@ function isPermitted(query) {
   // (after you add 'filtering.js' tests); you can ignore it until then!
   var lower = v.lowerCase(query);
   if (v.includes(lower, "brexit")) return false;
+  if (v.includes(lower, "boris")) return false;
   var words = v.words(v.lowerCase(query));
   if (words.indexOf("shit") != -1) return false;
-  var words = v.words(v.lowerCase(query));
   if (words.indexOf("fuck") != -1) return false;
   return true;
 }
@@ -48,6 +50,11 @@ function handleSayClick() {
     conversation.innerHTML += "<p><strong>Silly bot:</strong> " + answer + "</p>";
   }
   document.getElementById("message").value = '';
+}
+
+function scrollToBottom() {
+  var chatWindow = document.getElementById('chat-window');
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
 // If we are running in a browser, add onclick handler 

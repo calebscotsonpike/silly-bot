@@ -13,6 +13,12 @@
     p {
       font-size: 120%;
     }
+
+    #chat-window {
+      height: 50vh;
+      width: 100%;
+      overflow: auto;
+    }
   </style>
 </head>
 
@@ -22,9 +28,13 @@
       <div clss="col-sm-12">
         <h1>Welcome to silly chat bot!</h1>
         <br />
-        <div id="conversation">
-          <p><strong>Silly bot:</strong> Hello, how are you?</p>
+
+        <div id="chat-window">
+          <div id="conversation">
+            <p><strong>Silly bot:</strong> Hello, how are you?</p>
+          </div>
         </div>
+
         <br />
         <div class="form-group row">
           <div class="col-sm-6">
