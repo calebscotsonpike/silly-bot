@@ -1,9 +1,10 @@
 //@author Tomas Petricek
 //@edited by Caleb Scotson Pike
-//@last modified 2020.12.16
+//@last modified 2020.12.17
 
 scrollToBottom();
 
+var body = window.document.getElementsByTagName("body")[0];
 var v = require('voca');
 
 function answerQuery(query) {

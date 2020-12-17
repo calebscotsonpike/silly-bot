@@ -6,7 +6,7 @@ README for silly-bot
 
 @author Tomas Petricek
 @edited by Caleb Scotson Pike
-@last modified 2020-12-10
+@last modified 2020-12-17
 
 This is a very silly chat bot with no AI at all.
 The silly bot is a slight improvement on the useless bot.
